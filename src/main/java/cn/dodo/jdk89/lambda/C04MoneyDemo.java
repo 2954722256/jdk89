@@ -50,16 +50,19 @@ class MyMoney2 {
 public class C04MoneyDemo {
 
     public static void main(String[] args) {
-        do01();
+//        do01();
         do02();
     }
 
     private static void do02() {
         MyMoney2 me = new MyMoney2(99999999);
-
+        //jdk8 后， 对应的
+        // 1) Integer 输入类型   （i  也是 ）
+        // 2) String 输出类型
         Function<Integer, String> moneyFormat = i -> new DecimalFormat("#,###")
                 .format(i);
 
+//        me.printMoney(moneyFormat);
         // 函数接口链式操作
         me.printMoney(moneyFormat.andThen(s -> "人民币 " + s));
     }

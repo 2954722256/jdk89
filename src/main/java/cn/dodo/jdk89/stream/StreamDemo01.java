@@ -10,21 +10,33 @@ public class StreamDemo01 {
         doF01_OldAdd(nums);
         doF02_NewAdd(nums);
         doF03_map(nums);
+        doF04_Action(nums);
+        doF05_Transformation(nums);
 
-        // 使用stream的内部迭代
-        // map就是中间操作（返回stream的操作）
-        // sum就是终止操作
-        int sum2 = IntStream.of(nums).map(StreamDemo01::doubleNum).sum();
-        System.out.println("结果为：" + sum2);
+    }
 
-        System.out.println("惰性求值就是终止没有调用的情况下，中间操作不会执行");
+
+    private static void doF05_Transformation(int[] nums) {
+
+        System.out.println("doF05_Transformation 前： 惰性求值就是终止没有调用的情况下，中间操作不会执行");
         IntStream.of(nums).map(StreamDemo01::doubleNum);
+        System.out.println("doF05_Transformation 后");
+
+    }
+
+
+    // 使用stream的内部迭代
+    // map就是中间操作（返回stream的操作）
+    // sum就是终止操作
+    private static void doF04_Action(int[] nums) {
+        System.out.println("doF04_Action 前！！" );
+        int sum2 = IntStream.of(nums).map(StreamDemo01::doubleNum).sum();
+        System.out.println("doF04_Action：" + sum2);
     }
 
     private static void doF03_map(int[] nums) {
         int[] nums1 = IntStream.of(nums).map(i -> i*2).toArray();
         System.out.println("doF03_map map->nums1：" + Arrays.toString(nums1));
-
 
         int sum1 = IntStream.of(nums).sum();
         System.out.println("doF03_map 结果为：" + sum1);

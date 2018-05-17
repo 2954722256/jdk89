@@ -5,6 +5,10 @@ import java.util.function.IntConsumer;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
 
+/**
+ *  方法引用的一些写法
+ *      一些 名字
+ */
 public class C05FunctionDemo {
 
     public static void main(String[] args) {

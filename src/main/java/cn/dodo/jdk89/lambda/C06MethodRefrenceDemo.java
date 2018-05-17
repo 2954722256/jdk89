@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.IntUnaryOperator;
 
+/**
+ * 理解方法的引用
+ *      理解 非静态方法， 对应的第一个参数，其实是 对象this
+ *      理解 对应的 方法引用 类名，  写法
+ */
 public class C06MethodRefrenceDemo {
 
     public static void main(String[] args) {

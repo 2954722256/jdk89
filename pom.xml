@@ -7,6 +7,31 @@
     <groupId>cn.dodo</groupId>
     <artifactId>jdk89</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
+    <dependencies>
+
+        <!-- 对应帮助类-->
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.1</version>
+        </dependency>
+
+
+        <!-- setter, getter ， 构造， toString等  注解 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.2</version>
+        </dependency>
+
+    </dependencies>
+
+
+
+
     <build>
         <plugins>
             <plugin>

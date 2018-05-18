@@ -20,12 +20,23 @@
         </dependency>
 
 
+        <!-- 1.16.12 jdk8没问题 jdk10有问题  -->
+        <!-- 1.16.18 jdk10有问题-->
         <!-- setter, getter ， 构造， toString等  注解 -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.2</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<version>1.16.18</version>-->
+        <!--</dependency>-->
+
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven -->
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok-maven</artifactId>-->
+            <!--<version>1.16.20.0</version>-->
+            <!--<type>pom</type>-->
+        <!--</dependency>-->
 
     </dependencies>
 
@@ -41,6 +52,11 @@
                     <source>10</source>
                     <target>10</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven-plugin</artifactId>
+                <version>1.16.6.1</version>
             </plugin>
         </plugins>
     </build>
